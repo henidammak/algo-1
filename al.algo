@@ -1,0 +1,27 @@
+ALGORITHM sentence
+VAR
+    sent : STRING;
+  nb_c,nb_w,nb_v,i :INTEGER :=0;
+  l :INTEGER;
+  
+
+BEGIN
+REPEAT
+l := sent.length-1;
+read(sent)
+UNTIL (sent[l]='.')
+nb_c:=l-1
+   FOR i FROM 0 TO l STEP step  DO
+   IF (sent[i]==' ') THEN
+   nb_w:=nb_w+1;
+   nb_c:=nb_c-1
+   END IF 
+   IF (sent[i]=='e'OR'a'OR'i'OR'o'OR'u'OR'y'OR'I'OR'E'OR'A'OR'O'OR'U'OR'Y')THEN
+   nb_v := nb_v+1;
+     END IF
+
+     END FOR
+write("number of car:" + nb_c)
+write("number of words:" + nb_w)
+write("number of vowels:" + nb_v)
+END
